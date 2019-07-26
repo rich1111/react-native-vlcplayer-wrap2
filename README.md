@@ -1,10 +1,13 @@
-# react-native-vlcplayer-wrap
+# react-native-vlcplayer-wrap2
+
+Note! This is fixed for React-Native 0.6+
 
 A `<VLCPlayer>` component for react-native
 This project refers to [react-native-video] (https://github.com/react-native-community/react-native-video).
 [react-native-vlcplayer](https://github.com/xiongchuan86/react-native-vlcplayer),
 [react-native-vlc-player](https://github.com/ghondar/react-native-vlc-player),
-[react-native-vlc-yz-player](https://github.com/xuyuanzhou/react-native-vlcplayer-wrap)
+[react-native-yz-vlcplayer](https://github.com/xuyuanzhou/react-native-yz-vlcplayer)
+[react-native-vlcplayer-wrap](https://github.com/xuyuanzhou/react-native-vlcplayer-wrap)
 
 VLCPlayer supports various formats (mp4, m3u8, flv, mov, rtsp, rtmp, etc.), see [vlc wiki] (https://wiki.videolan.org/Documentation:Documentation/)
 
@@ -36,7 +39,7 @@ VLCPlayer supports various formats (mp4, m3u8, flv, mov, rtsp, rtmp, etc.), see 
 
 ###  install
 
-     `npm install react-native-vlcplayer-wrap --save`
+     `npm install react-native-vlcplayer-wrap2 --save`
 
 ## android setup
 
@@ -44,7 +47,7 @@ android vlc-sdk from:[https://github.com/mengzhidaren/Vlc-sdk-lib](https://githu
 
 step 1:
 
-Run `react-native link react-native-vlcplayer-wrap`
+Run `react-native link react-native-vlcplayer-wrap2`
 
 
 ## ios setup
@@ -55,7 +58,11 @@ reference: [https://code.videolan.org/videolan/VLCKit](https://code.videolan.org
 
 step 1:
 
-   Run `react-native link react-native-vlcplayer-wrap`
+   Run `react-native link react-native-vlcplayer-wrap2`
+
+   cd ios
+
+   Run `pod install`
 
 step 2:
 
@@ -78,9 +85,12 @@ step 4:
 
 step 5:
 
-   add framework search path:      `$(PROJECT_DIR)/../vlcKit`
+   add framework search path in main project:      `$(PROJECT_DIR)/../vlcKit`
 
    ![](./images/1.png)
+
+
+   add framework search path in Pods project, target RNVlcPlayerWrap:      `$(PODS_ROOT)/../../vlcKit`
 
 
 step 6:
@@ -151,7 +161,7 @@ this.vlcPlayer.snapshot(path)  // path: string  存储的文件的路径。
 
 ##  VLCPlayer props
 
-    import { VLCPlayer } from 'eact-native-vlcplayer-wrap';
+    import { VLCPlayer } from 'react-native-vlcplayer-wrap2';
 
    | props       | type     |  value  |   describe |
    | --------    | :----:   |  :----:  |   :----:   |
@@ -243,7 +253,7 @@ this.vlcPlayer.snapshot(path)  // path: string  存储的文件的路径。
 
 ##  use plugin
 ````
-   Import { VLCPlayer, VlCPlayerView } from 'eact-native-vlcplayer-wrap';
+   Import { VLCPlayer, VlCPlayerView } from 'react-native-vlcplayer-wrap2';
    Import Orientation from 'react-native-orientation';
 
    (1)
@@ -361,7 +371,7 @@ Rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov
 
    (2)
 
-       import { VLCPlayer, VlcSimplePlayer } from 'eact-native-vlcplayer-wrap';
+       import { VLCPlayer, VlcSimplePlayer } from 'react-native-vlcplayer-wrap2';
        import Orientation from 'react-native-orientation';
 
        <VlcSimplePlayer
@@ -511,7 +521,7 @@ Rtsp://184.72.239.149/vod/mp4://BigBuckBunny_175k.mov
 
     import React, {Component} from 'react';
     import {StyleSheet, View} from 'react-native';
-    import {VlcSimplePlayer, VLCPlayer}  from 'eact-native-vlcplayer-wrap';
+    import {VlcSimplePlayer, VLCPlayer}  from 'react-native-vlcplayer-wrap2';
 
 
     export default class App extends Component<Props> {

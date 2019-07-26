@@ -3,11 +3,11 @@
     "name": "rich111"
   },
   "bugs": {
-    "url": "https://github.com/rich111/react-native-vlcplayer-wrap2/issues"
+    "url": "https://github.com/rich1111/react-native-vlcplayer-wrap2/issues"
   },
   "description": "A `<VLCPlayer>` component for react-native This project refers to [react-native-video] (https://github.com/react-native-community/react-native-video). [react-native-vlcplayer](https://github.com/xiongchuan86/react-native-vlcplayer), [react-native-vlc-player](https://github.com/ghondar/react-native-vlc-player), [react-native-vlc-yz-player](https://github.com/xuyuanzhou/react-native-vlcplayer-wrap)",
   "email": "rich111.chen@gmail.com",
-  "homepage": "https://github.com/rich111/react-native-vlcplayer-wrap2",
+  "homepage": "https://github.com/rich1111/react-native-vlcplayer-wrap2",
   "keywords": [
     "vlc",
     "player",
@@ -21,7 +21,7 @@
   "name": "react-native-vlcplayer-wrap2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rich111/react-native-vlcplayer-wrap2.git"
+    "url": "git+https://github.com/rich1111/react-native-vlcplayer-wrap2.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
