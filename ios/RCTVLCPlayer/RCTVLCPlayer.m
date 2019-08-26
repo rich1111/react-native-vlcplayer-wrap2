@@ -106,6 +106,7 @@ static NSString *const playbackRate = @"rate";
         BOOL isNetWork   = [RCTConvert BOOL:[_source objectForKey:@"isNetwork"]];
         NSURL* _uri    = [NSURL URLWithString:uri];
         if(uri && uri.length > 0){
+            
             //init player && play
             if(initType == 2){
                 _player = [[VLCMediaPlayer alloc] initWithOptions:options];
@@ -442,10 +443,16 @@ static NSString *const playbackRate = @"rate";
  */
 - (void)setMuted:(BOOL)muted
 {
+    //Set the Audio is muted by default
+    BOOL defaultAudioSetting = true;
+    
     if(_player){
         VLCAudio *audio = _player.audio;
-        [audio setMuted: muted];
+//        [audio setMuted: muted];
+        [audio setMuted: defaultAudioSetting];
     }
+    
+    NSLog(@"[Debug-muted] the player is %@, the defaultAudioSetting is %i, the muted is %i", _player, defaultAudioSetting, muted);
 }
 
 -(void)setVolume:(int)interval
@@ -456,6 +463,7 @@ static NSString *const playbackRate = @"rate";
             audio.volume = interval;
         }
     }
+    
 }
 
 -(void)setVolumeDown:(int)volume
