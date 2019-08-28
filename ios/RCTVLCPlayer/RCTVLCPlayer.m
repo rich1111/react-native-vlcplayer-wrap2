@@ -444,15 +444,16 @@ static NSString *const playbackRate = @"rate";
 - (void)setMuted:(BOOL)muted
 {
     //Set the Audio is muted by default
-    BOOL defaultAudioSetting = true;
+    //    BOOL defaultAudioSetting = true;
     
     if(_player){
         VLCAudio *audio = _player.audio;
-//        [audio setMuted: muted];
-        [audio setMuted: defaultAudioSetting];
+        [audio setMuted: muted];
+        //        [audio setMuted: defaultAudioSetting];
     }
     
-    NSLog(@"[Debug-muted] the player is %@, the defaultAudioSetting is %i, the muted is %i", _player, defaultAudioSetting, muted);
+    NSLog(@"[Debug-muted] the player is %@, the muted is %i", _player, muted);
+}_player, defaultAudioSetting, muted);
 }
 
 -(void)setVolume:(int)interval
