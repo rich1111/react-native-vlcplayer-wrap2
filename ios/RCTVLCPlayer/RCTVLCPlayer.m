@@ -453,7 +453,6 @@ static NSString *const playbackRate = @"rate";
     }
     
     NSLog(@"[Debug-muted] the player is %@, the muted is %i", _player, muted);
-}_player, defaultAudioSetting, muted);
 }
 
 -(void)setVolume:(int)interval
