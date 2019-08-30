@@ -549,11 +549,11 @@ static NSString *const playbackRate = @"rate";
 //- (void)willRemoveSubview:(UIView *)subview
 
 
-- (void)removeFromSuperview
-{
-    NSLog(@"removeFromSuperview");
-    [self _release];
-    [super removeFromSuperview];
-}
+//- (void)removeFromSuperview
+//{
+//    NSLog(@"removeFromSuperview");
+//    [self _release];
+//    [super removeFromSuperview];
+//}
 
 @end
