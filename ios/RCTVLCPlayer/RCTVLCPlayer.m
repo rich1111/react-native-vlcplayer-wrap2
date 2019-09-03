@@ -185,7 +185,7 @@ static NSString *const playbackRate = @"rate";
                 if(mediaOptions){
                     [media addOptions:mediaOptions];
                 }
-                [media parseWithOptions:VLCMediaParseLocal|VLCMediaFetchLocal|VLCMediaParseNetwork|VLCMediaFetchNetwork];
+                //[media parseWithOptions:VLCMediaParseLocal|VLCMediaFetchLocal|VLCMediaParseNetwork|VLCMediaFetchNetwork];
                  _player.media = media;
             }
             if(autoplay)
@@ -517,7 +517,8 @@ static NSString *const playbackRate = @"rate";
 
 -(void)setClear:(float)clear
 {
-    [self _release];
+    [self setMuted:true];
+    //[self _release];
 }
 
 
@@ -552,6 +553,7 @@ static NSString *const playbackRate = @"rate";
 //- (void)removeFromSuperview
 //{
 //    NSLog(@"removeFromSuperview");
+//    //[self setMuted:true];
 //    [self _release];
 //    [super removeFromSuperview];
 //}
